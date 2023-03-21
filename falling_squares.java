@@ -209,7 +209,6 @@ public class falling_squares extends JPanel {
 
             game.update();
             game.repaint();
-            //squares speed
             Thread.sleep(10);
         }
     }
