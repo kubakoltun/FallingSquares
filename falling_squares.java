@@ -22,7 +22,6 @@ public class falling_squares extends JPanel {
     static boolean[] isClicked = new boolean[4];
     static boolean[] numberCreated = new boolean[4];
     static boolean gameRunning = false;
-
     static int[] tab = new int[4];
 
     public void generateRandomNumber() {
@@ -59,7 +58,6 @@ public class falling_squares extends JPanel {
         g.fillRect(0, 0, windowWidth, windowHeight);
         g.setColor(Color.blue);
         for (int i = 0; i < tab.length; i++) {
-
             g.fillRect(tab[i], squareYLocationA[i], squareWidth, squareHeight);
         }
 
@@ -70,10 +68,8 @@ public class falling_squares extends JPanel {
             if (!numberCreated[i]) {
                 generateRandomNumber();
             }
-
             if (squareYLocationA[i] <= windowHeight) {
                 squareYLocationA[i]++;
-
             } else {
                 numberCreated[i] = false;
                 squareYLocationA[i] = -squareHeight;
@@ -135,7 +131,6 @@ public class falling_squares extends JPanel {
                 } else {
                     missed++;
                 }
-
             }
         }
 
