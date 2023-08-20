@@ -26,25 +26,25 @@ public class falling_squares extends JPanel {
 
     public void generateRandomNumber() {
         Random rand = new Random();
-        if(!numberCreated[0]) {
+        if (!numberCreated[0]) {
             tab[0] = rand.nextInt(windowWidth - squareWidth);
             isClicked[0] = false;
             numberCreated[0] = true;
             squareCounter++;
         }
-        if(!numberCreated[1]) {
+        if (!numberCreated[1]) {
             tab[1] = rand.nextInt(windowWidth - squareWidth);
             isClicked[1] = false;
             numberCreated[1] = true;
             squareCounter++;
         }
-        if(!numberCreated[2]) {
+        if (!numberCreated[2]) {
             tab[2] = rand.nextInt(windowWidth - squareWidth);
             isClicked[2] = false;
             numberCreated[2] = true;
             squareCounter++;
         }
-        if(!numberCreated[3]) {
+        if (!numberCreated[3]) {
             tab[3] = rand.nextInt(windowWidth - squareWidth);
             isClicked[3] = false;
             numberCreated[3] = true;
@@ -57,6 +57,7 @@ public class falling_squares extends JPanel {
         g.setColor(Color.orange);
         g.fillRect(0, 0, windowWidth, windowHeight);
         g.setColor(Color.blue);
+        
         for (int i = 0; i < tab.length; i++) {
             g.fillRect(tab[i], squareYLocationA[i], squareWidth, squareHeight);
         }
@@ -148,8 +149,7 @@ public class falling_squares extends JPanel {
                         if (squaresRatio > 50.0) {
                             gameRunning = false;
                             JOptionPane.showMessageDialog(frame,"You won", "Result", JOptionPane.INFORMATION_MESSAGE);
-                        }
-                        else {
+                        } else {
                             gameRunning = false;
                             JOptionPane.showMessageDialog(frame,"You lost", "Result", JOptionPane.INFORMATION_MESSAGE);
                         }
